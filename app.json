@@ -1,0 +1,6 @@
+{
+  "name": "Fitness Buddy Agent",
+  "description": "AI-powered multi-agent fitness assistant using IBM watsonx Orchestrate",
+  "keywords": ["AI", "Fitness", "Watsonx", "Multi-Agent"],
+  "website": "https://github.com/KMA70/Fitness_Buddy_Agent"
+}
