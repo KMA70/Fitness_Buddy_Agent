@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness Buddy Agent</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <h1>💪 Fitness Buddy</h1>
+      <p class="tagline">Your AI-powered personal training companion</p>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <h2>Reach Your Goals, One Rep at a Time</h2>
+      <p>
+        Ask your Fitness Buddy about workout plans, nutrition tips,
+        recovery strategies, or anything else on your fitness journey.
+        Your personal AI coach is always ready to help.
+      </p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="icon">🏋️</span>
+          <h3>Workout Plans</h3>
+          <p>Custom routines tailored to your fitness level and goals.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🥗</span>
+          <h3>Nutrition Advice</h3>
+          <p>Meal plans and macro guidance to fuel your training.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">📈</span>
+          <h3>Progress Tracking</h3>
+          <p>Tips to monitor milestones and stay motivated.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🧘</span>
+          <h3>Recovery &amp; Wellness</h3>
+          <p>Rest strategies, stretching routines, and mindfulness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Powered by <strong>IBM watsonx Orchestrate</strong> &middot; Fitness Buddy Agent</p>
+    </div>
+  </footer>
+
+  <!-- ── watsonx Orchestrate Chat Widget ────────────────────── -->
+  <!--
+    Root element the wxO loader will mount the chat widget into.
+    Kept outside normal flow so the floating bubble renders correctly.
+  -->
+  <div id="root"></div>
+
+  <script>
+    window.wxOConfiguration = {
+      orchestrationID: "1a65a893a1144184bba6c6409e60a41c_d9c5c141-15dd-4e31-95f4-ad1e50f431f5",
+      hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+      rootElementID: "root",
+      deploymentPlatform: "ibmcloud",
+      crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/1a65a893a1144184bba6c6409e60a41c:d9c5c141-15dd-4e31-95f4-ad1e50f431f5::",
+      chatOptions: {
+        agentId: "b66563c7-35ac-43f8-bf76-41e5b8328b01"
+      }
+    };
+
+    setTimeout(function () {
+      var script = document.createElement('script');
+      script.src = window.wxOConfiguration.hostURL + '/wxochat/wxoLoader.js?embed=true';
+      script.addEventListener('load', function () {
+        wxoLoader.init();
+      });
+      document.head.appendChild(script);
+    }, 0);
+  </script>
+
+</body>
+</html>
