@@ -62,7 +62,12 @@
     Root element the wxO loader will mount the chat widget into.
     Kept outside normal flow so the floating bubble renders correctly.
   -->
-  <div id="root"></div>
+  
+<body>
+
+  <!-- Your existing content -->
+
+  <div id="root"></div>  <!-- ✅ ADD THIS -->
 
   <script>
     window.wxOConfiguration = {
@@ -70,7 +75,7 @@
       hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
       rootElementID: "root",
       deploymentPlatform: "ibmcloud",
-      crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/1a65a893a1144184bba6c6409e60a41c:d9c5c141-15dd-4e31-95f4-ad1e50f431f5::",
+      crn: "...",
       chatOptions: {
         agentId: "b66563c7-35ac-43f8-bf76-41e5b8328b01"
       }
@@ -87,4 +92,5 @@
   </script>
 
 </body>
+
 </html>
