@@ -6,14 +6,16 @@ A Flask web application that embeds the **IBM watsonx Orchestrate** chat widget 
 
 ```
 fitness-buddy-agent/
-├── app.py               # Flask application entry point
-├── requirements.txt     # Python dependencies
-├── README.md            # This file
-├── .env                 # Environment variables (not committed)
+├── app.py
+├── requirements.txt
+├── README.md
+├── app.json                         
+├── problem_statement_fitness_buddy.pdf 
+├── projectpresentation.pptx          
 ├── templates/
-│   └── index.html       # Main page with wxO chat widget
-└── static/
-    └── style.css        # Application styles
+│   └── index.html
+├── static/
+│   └── style.css
 ```
 
 ## Prerequisites
