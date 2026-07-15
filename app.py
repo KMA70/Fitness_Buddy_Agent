@@ -9,7 +9,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template(
+        "index.html",
+        agent_id=os.getenv("AGENT_ID"),
+        agent_env_id=os.getenv("AGENT_ENV_ID")
+    )
 
 
 if __name__ == "__main__":
